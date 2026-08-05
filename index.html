@@ -1,253 +1,218 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ronghao Dang — personal academic homepage, publications, research and curriculum vitae.">
+  <meta name="description" content="Ronghao Dang — AI Researcher working on Embodied AI, Multimodal Foundation Models, 3D Vision, and Reinforcement Learning.">
+  <meta name="keywords" content="Ronghao Dang, 党荣浩, Embodied AI, Multimodal Foundation Models, 3D Vision, Reinforcement Learning">
   <meta name="author" content="Ronghao Dang">
-  <meta name="theme-color" content="#102e2b">
   <meta property="og:title" content="Ronghao Dang | 党荣浩">
   <meta property="og:description" content="Personal academic homepage of Ronghao Dang.">
   <meta property="og:type" content="website">
   <title>Ronghao Dang | 党荣浩</title>
+  <link rel="icon" href="images/ronghao-avatar.svg" type="image/svg+xml">
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="css/ronghao.css">
+  <script defer src="font-awesome/js/fontawesome.min.js"></script>
+  <script defer src="font-awesome/js/brands.min.js"></script>
+  <script defer src="font-awesome/js/regular.min.js"></script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="Ronghao Dang home">
-      <span class="brand-mark">RD</span>
-      <span>Ronghao Dang</span>
-    </a>
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#cv">CV</a>
-    </nav>
-    <a class="nav-cta" href="mailto:drh1710013267@163.com">Contact <span>↗</span></a>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#" class="menu-icon" aria-label="Open navigation">
+          <svg viewBox="0 0 18 15" aria-hidden="true">
+            <path fill="#424242" d="M18,1.484c0,.82-.665,1.484-1.484,1.484H1.484C.665,2.969,0,2.304,0,1.484S.665,0,1.484,0h15.031C17.335,0,18,.665,18,1.484zM18,7.516C18,8.335,17.335,9,16.516,9H1.484C.665,9,0,8.335,0,7.516s.665-1.484,1.484-1.484h15.031C17.335,6.031,18,6.696,18,7.516zM18,13.516C18,14.335,17.335,15,16.516,15H1.484C.665,15,0,14.335,0,13.516s.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516z"/>
+          </svg>
+        </a>
+        <div class="trigger">
+          <a class="page-link" href="#bio"><b>Biography</b></a>
+          <a class="page-link" href="#timeline"><b>Experiences</b></a>
+          <a class="page-link" href="#projects"><b>Projects</b></a>
+          <a class="page-link" href="#publications"><b>Publications</b></a>
+          <a class="page-link" href="#codebase"><b>Links</b></a>
+          <a class="page-link" href="#awards"><b>Honors &amp; Awards</b></a>
+        </div>
+      </nav>
+    </div>
   </header>
 
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-copy">
-        <p class="eyebrow"><span></span> Personal academic homepage</p>
-        <h1 id="hero-title">Ronghao<br>Dang <em>党荣浩</em></h1>
-        <p class="hero-lede">Embodied AI · Multimodal Foundation Models · 3D Vision · Reinforcement Learning</p>
-        <div class="hero-links" aria-label="Profile links">
-          <a class="button button-primary" href="https://scholar.google.com/citations?hl=en&amp;user=3MGeRMUAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noreferrer">Google Scholar <span>↗</span></a>
-          <a class="button button-ghost" href="https://github.com/Rh-Dang" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
-          <a class="text-link" href="files/Ronghao_Dang_CV.pdf" target="_blank">Download CV ↓</a>
+  <div id="profile-cover" class="cover shallow-bg img-responsive">
+    <div id="profile-namecard" class="profile-wrapper wrapper-light">
+      <div id="my-pic" class="profile-col profile-col-1">
+        <img id="profile-avatar" src="images/ronghao-dang.jpg" alt="Portrait of Ronghao Dang" class="circle-img border-dark">
+      </div>
+      <div id="my-contact" class="profile-col profile-col-2">
+        <div id="my-name" class="text-grey-dark">Ronghao Dang <span class="cn-name">党荣浩</span></div>
+        <div id="my-title" class="text-grey">AI Researcher · Alibaba DAMO Academy</div>
+        <div id="my-email" class="text-grey-light">drh1710013267 [at] 163.com</div>
+        <div class="social-media profile-actions">
+          <a href="https://scholar.google.com/citations?hl=en&amp;user=3MGeRMUAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noreferrer" class="icon-button profile-button" aria-label="Google Scholar">Scholar</a>
+          <a href="https://github.com/Rh-Dang" target="_blank" rel="noreferrer" class="icon-button profile-button" aria-label="GitHub">GitHub</a>
+          <a href="files/Ronghao_Dang_CV.pdf" target="_blank" class="icon-button profile-button" aria-label="Curriculum Vitae">CV</a>
+          <a href="mailto:drh1710013267@163.com" class="icon-button profile-button" aria-label="Email">Email</a>
         </div>
       </div>
+    </div>
+  </div>
 
-      <aside class="identity-card" aria-label="Profile summary">
-        <div class="monogram" aria-hidden="true"><span>荣</span><span>浩</span></div>
-        <div class="identity-meta">
-          <p>NAME / 姓名</p>
-          <strong>Ronghao Dang<br>党荣浩</strong>
+  <main class="page-content">
+    <div class="wrapper">
+      <section id="bio" class="bio">
+        <h1 class="md-heading text-left"><span class="heading-icon">●</span> About</h1>
+        <div class="bio-body about-copy">
+          <p>I am an AI Researcher at <a href="https://damo.alibaba.com/" target="_blank" rel="noreferrer">Alibaba DAMO Academy</a> in Hangzhou. My research focuses on <b>Embodied AI</b>, <b>Multimodal Foundation Models</b>, <b>3D Vision</b>, and <b>Reinforcement Learning</b>. I am interested in building intelligent agents that can perceive, reason, plan, and act in complex physical environments.</p>
+          <p>I received my M.Eng. in Control Science and Engineering and B.Eng. in Automation from <a href="https://www.tongji.edu.cn/" target="_blank" rel="noreferrer">Tongji University</a>. I am always open to research discussions and collaboration. Feel free to drop me an <a href="mailto:drh1710013267@163.com">email</a>.</p>
+
+          <div class="bio-column">
+            <h3><span class="section-symbol">✦</span> <strong>Research Interests</strong></h3>
+            <ul class="interest-tags">
+              <li><b>Embodied AI</b><span>Embodied cognition · navigation · planning</span></li>
+              <li><b>Multimodal Foundation Models</b><span>Vision-language models · video understanding</span></li>
+              <li><b>3D Vision</b><span>Spatial perception · localization · physical reasoning</span></li>
+              <li><b>Reinforcement Learning</b><span>Sequential decision-making · policy learning</span></li>
+            </ul>
+          </div>
+
+          <div class="bio-column bio-column-right">
+            <h3><span class="section-symbol">◆</span> <strong>Education</strong></h3>
+            <div class="education-entry">
+              <b>Tongji University</b>
+              <ul><li>M.Eng. in Control Science and Engineering, 2021–2024</li><li>National Scholarship, Ministry of Education of China, 2023</li></ul>
+            </div>
+            <div class="education-entry">
+              <b>Tongji University</b>
+              <ul><li>B.Eng. in Automation, 2017–2021</li></ul>
+            </div>
+          </div>
         </div>
-        <div class="status-line"><i></i><span>AI Researcher at Alibaba DAMO Academy · Hangzhou</span></div>
-      </aside>
+      </section>
 
-      <div class="hero-index" aria-hidden="true">01 — PORTFOLIO / 2026</div>
-    </section>
-
-    <section class="section about" id="about">
-      <div class="section-label"><span>01</span> About</div>
-      <div class="section-body about-grid">
-        <div>
-          <p class="kicker">Hello / 你好</p>
-          <h2>I am Ronghao Dang.</h2>
+      <section id="timeline" class="timeline-brief clean-timeline">
+        <h1 class="md-heading text-left"><span class="heading-icon">●</span> Experiences</h1>
+        <div class="timeline-body">
+          <article class="timeline-item">
+            <div class="timeline-date"><span class="company-mark ali">A</span>May 2024 – Present</div>
+            <div class="timeline-title">AI Researcher @ <a href="https://damo.alibaba.com/" target="_blank" rel="noreferrer">Alibaba DAMO Academy</a></div>
+            <div class="timeline-desc">
+              <b>Hangzhou</b>
+              <ul>
+                <li>Investigated the limitations of MLLMs' embodied cognitive capabilities and proposed ECBench and EOCBench.</li>
+                <li>Open-sourced RynnEC (400 GitHub stars; 1.5k+ Hugging Face downloads).</li>
+                <li>Open-sourced RynnBrain (500 GitHub stars; 4k+ Hugging Face downloads).</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date"><span class="company-mark sense">S</span>May 2023 – Sept. 2023</div>
+            <div class="timeline-title">Research Intern @ <a href="https://www.sensetime.com/" target="_blank" rel="noreferrer">SenseTime</a></div>
+            <div class="timeline-desc">
+              <b>Shanghai</b>
+              <ul>
+                <li>Built an LLM/VLM-driven data engine to scale referring expression comprehension instruction data by 20×+.</li>
+                <li>Released the InDET datasets and InstructDET model, advancing semantic understanding and vision-language alignment.</li>
+              </ul>
+            </div>
+          </article>
         </div>
-        <div class="prose">
-          <p>I am an AI Researcher at <strong>Alibaba DAMO Academy</strong>. My research focuses on embodied intelligence and multimodal foundation models, with an emphasis on building agents that can perceive, reason, plan, and act in physical environments.</p>
-          <p>For the latest and complete publication record, please visit my <a href="https://scholar.google.com/citations?hl=en&amp;user=3MGeRMUAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noreferrer">Google Scholar profile</a>. For code and open-source work, visit <a href="https://github.com/Rh-Dang" target="_blank" rel="noreferrer">GitHub</a>.</p>
-          <p class="prose-cn">我目前在阿里巴巴达摩院从事具身智能与多模态基础模型研究，关注具身认知、时空定位、物理推理与规划。欢迎通过邮件与我交流。</p>
-        </div>
-      </div>
-      <div class="contact-strip">
-        <span>EMAIL</span>
-        <a href="mailto:drh1710013267@163.com">drh1710013267@163.com</a>
-        <span>PROFILE</span>
-        <a href="https://scholar.google.com/citations?user=3MGeRMUAAAAJ" target="_blank" rel="noreferrer">Scholar ID · 3MGeRMUAAAAJ</a>
-      </div>
-      <div class="contact-strip contact-strip-secondary">
-        <span>PHONE</span>
-        <a href="tel:+8617317813949">+86 173 1781 3949</a>
-        <span>WECHAT</span>
-        <span class="contact-value">drh1710013267</span>
-      </div>
-    </section>
+      </section>
 
-    <section class="section research" id="research">
-      <div class="section-label"><span>02</span> Research</div>
-      <div class="section-body">
-        <div class="section-heading-row">
+      <section id="projects" class="publications project-section">
+        <h1 class="md-heading text-left"><span class="heading-icon">●</span> Selected Projects</h1>
+        <div class="pub-list">
+          <article class="pub project-pub">
+            <div class="pub-left"><div class="project-visual brain"><span>Rynn</span><b>Brain</b><i>Foundation Model</i></div></div>
+            <div class="pub-right">
+              <div class="title">RynnBrain</div>
+              <div class="authors"><b>First Contributor · Team Leader</b></div>
+              <div class="project-description">A unified embodied foundation model integrating comprehensive egocentric understanding, diverse spatiotemporal localization, physically grounded reasoning, and physics-aware planning.</div>
+              <div class="publish"><span class="place">2B / 8B / 30B-A3B MoE</span><span class="place">28 Benchmarks</span></div>
+              <div class="tags">RynnBrain-Nav · RynnBrain-Plan · RynnBrain-VLA · RynnBrain-CoP</div>
+            </div>
+          </article>
+
+          <article class="pub project-pub">
+            <div class="pub-left"><div class="project-visual ec"><span>Rynn</span><b>EC</b><i>Embodied Cognition</i></div></div>
+            <div class="pub-right">
+              <div class="title">RynnEC</div>
+              <div class="authors"><b>First Contributor · Team Leader</b></div>
+              <div class="project-description">A region-centric video paradigm for embodied-agent cognition, enabling fine-grained perception and more precise physical interactions.</div>
+              <div class="publish"><span class="place">Object Cognition</span><span class="place">Spatial Reasoning</span></div>
+              <div class="tags">Reported +23.5% over Gemini 2.5 Pro on the evaluated tasks</div>
+            </div>
+          </article>
+
+          <article class="pub project-pub">
+            <div class="pub-left"><div class="project-visual nav"><span>Visual Object</span><b>Navigation</b><i>DOA · DAT · MT</i></div></div>
+            <div class="pub-right">
+              <div class="title">Visual Object Navigation</div>
+              <div class="authors"><b>First Contributor</b></div>
+              <div class="project-description">Introduced DOA, DAT, and MT to strengthen indoor object-navigation perception and decision-making.</div>
+              <div class="publish"><span class="place">Indoor Navigation</span><span class="place">60% → 80% Success Rate</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="publications" class="publications scholar-section">
+        <h1 class="md-heading text-left"><span class="heading-icon">●</span> Publications</h1>
+        <div class="scholar-callout">
           <div>
-            <p class="kicker">Research profile</p>
-            <h2>Intelligence that<br>acts in the world.</h2>
+            <p class="scholar-label">CANONICAL PUBLICATION RECORD</p>
+            <h2>Google Scholar</h2>
+            <p>For the complete and most recent list of publications, citation counts, and co-authors, please visit my Google Scholar profile. During my master's study, I published more than ten papers at top-tier conferences in vision-language navigation and related fields.</p>
           </div>
-          <p>My work spans embodied cognition, multimodal perception, 3D scene understanding, and decision-making. I build models and benchmarks that connect visual understanding with physically grounded reasoning and action.</p>
+          <a href="https://scholar.google.com/citations?hl=en&amp;user=3MGeRMUAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noreferrer">View all publications <span>↗</span></a>
         </div>
-        <div class="interest-list" aria-label="Research interests">
-          <article><span>01</span><h3>Embodied AI</h3><p>Perception, cognition, navigation, planning, and interaction for agents situated in physical environments.</p></article>
-          <article><span>02</span><h3>Multimodal Foundation Models</h3><p>Unified vision-language models with strong video understanding, grounding, reasoning, and generalization.</p></article>
-          <article><span>03</span><h3>3D Vision</h3><p>Spatial representation and reasoning across objects, scenes, trajectories, and egocentric observations.</p></article>
-          <article><span>04</span><h3>Reinforcement Learning</h3><p>Learning policies and aligning model behavior for robust sequential decision-making.</p></article>
-        </div>
-        <div class="profile-cards">
-          <a class="profile-card scholar" href="https://scholar.google.com/citations?hl=en&amp;user=3MGeRMUAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noreferrer">
-            <span class="card-number">01</span>
-            <div class="card-icon" aria-hidden="true">S</div>
-            <h3>Google Scholar</h3>
-            <p>Peer-reviewed publications, citation metrics, and the latest research record.</p>
-            <strong>View research profile ↗</strong>
+      </section>
+
+      <section id="codebase" class="bio">
+        <h1 class="md-heading text-left"><span class="heading-icon">●</span> Profiles &amp; Resources</h1>
+        <div class="card-container resource-cards">
+          <a class="github-card resource-card" href="https://github.com/Rh-Dang" target="_blank" rel="noreferrer">
+            <div><strong>Rh-Dang</strong><span class="label">GitHub</span></div>
+            <div class="description">Code, experiments, model releases, and open-source projects.</div>
+            <div class="meta"><span class="dot"></span><span>Visit GitHub profile →</span></div>
           </a>
-          <a class="profile-card github" href="https://github.com/Rh-Dang" target="_blank" rel="noreferrer">
-            <span class="card-number">02</span>
-            <div class="card-icon" aria-hidden="true">&lt;/&gt;</div>
-            <h3>GitHub</h3>
-            <p>Code, experiments, repositories, and ongoing open-source work.</p>
-            <strong>Explore repositories ↗</strong>
+          <a class="github-card resource-card" href="https://scholar.google.com/citations?user=3MGeRMUAAAAJ" target="_blank" rel="noreferrer">
+            <div><strong>Ronghao Dang</strong><span class="label">Scholar</span></div>
+            <div class="description">Publications, citations, research topics, and co-authors.</div>
+            <div class="meta"><span class="dot scholar-dot"></span><span>Visit Scholar profile →</span></div>
           </a>
-          <a class="profile-card cv-card" href="files/Ronghao_Dang_CV.pdf" target="_blank">
-            <span class="card-number">03</span>
-            <div class="card-icon" aria-hidden="true">CV</div>
-            <h3>Curriculum Vitae</h3>
-            <p>Education, research experience, projects, publications, skills, and awards.</p>
-            <strong>Open the full CV ↗</strong>
+          <a class="github-card resource-card" href="files/Ronghao_Dang_CV.pdf" target="_blank">
+            <div><strong>Curriculum Vitae</strong><span class="label">PDF</span></div>
+            <div class="description">Education, experience, publications, projects, and skills.</div>
+            <div class="meta"><span class="dot cv-dot"></span><span>Download CV →</span></div>
           </a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section experience" id="experience">
-      <div class="section-label"><span>03</span> Experience</div>
-      <div class="section-body">
-        <div class="section-heading-row">
-          <div><p class="kicker">Research experience</p><h2>Building models<br>from research to release.</h2></div>
-          <p>My experience covers embodied cognition benchmarks, foundation models, visual grounding, and large-scale multimodal data engines.</p>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="timeline-date"><span>2024.05</span><b>Present</b></div>
-            <div class="timeline-content">
-              <div class="timeline-title"><div><h3>Alibaba DAMO Academy</h3><p>AI Researcher · Hangzhou</p></div><span>Current</span></div>
-              <ul>
-                <li>Investigated limitations in the embodied cognitive capabilities of multimodal large language models and proposed <strong>ECBench</strong> and <strong>EOCBench</strong>.</li>
-                <li>Open-sourced the embodied cognitive model <strong>RynnEC</strong>, reaching 400 GitHub stars and more than 1,500 Hugging Face downloads.</li>
-                <li>Open-sourced the embodied foundation model <strong>RynnBrain</strong>, reaching 500 GitHub stars and more than 4,000 Hugging Face downloads.</li>
-              </ul>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <div class="timeline-date"><span>2023.05</span><b>2023.09</b></div>
-            <div class="timeline-content">
-              <div class="timeline-title"><div><h3>SenseTime</h3><p>Research Intern · Shanghai</p></div></div>
-              <ul>
-                <li>Built an LLM/VLM-driven data engine that scaled referring expression comprehension instruction data by more than 20×.</li>
-                <li>Released the <strong>InDET</strong> datasets and <strong>InstructDET</strong> model, advancing semantic understanding and vision-language alignment.</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+      <section id="awards" class="bio">
+        <h1 class="md-heading text-left"><span class="heading-icon">●</span> Selected Honors &amp; Awards</h1>
+        <ul class="award-list"><li><b>National Scholarship</b>, Ministry of Education of China, 2023.</li></ul>
+      </section>
 
-    <section class="section projects" id="projects">
-      <div class="section-label"><span>04</span> Selected Projects</div>
-      <div class="section-body">
-        <p class="kicker">Research highlights</p>
-        <h2>Selected projects.</h2>
-        <div class="project-list">
-          <article class="project-item">
-            <div class="project-head"><span>01 / FOUNDATION MODEL</span><b>First Contributor · Team Leader</b></div>
-            <h3>RynnBrain</h3>
-            <p>One unified framework for comprehensive egocentric understanding, diverse spatiotemporal localization, physically grounded reasoning, and physics-aware planning.</p>
-            <ul><li>2B, 8B, and 30B-A3B MoE model family evaluated across 28 benchmarks.</li><li>Outperforms models including Gemini-ER 1.5 and Cosmos-Reason2 in the reported evaluation.</li><li>Four post-trained variants: RynnBrain-Nav, RynnBrain-Plan, RynnBrain-VLA, and RynnBrain-CoP.</li></ul>
-          </article>
-          <article class="project-item">
-            <div class="project-head"><span>02 / EMBODIED COGNITION</span><b>First Contributor · Team Leader</b></div>
-            <h3>RynnEC</h3>
-            <p>A region-centric video paradigm for embodied-agent cognition, enabling fine-grained perception and more precise physical interaction.</p>
-            <ul><li>Targets object cognition, object segmentation, and spatial reasoning.</li><li>Reported a 23.5% improvement over Gemini 2.5 Pro on the evaluated embodied cognition tasks.</li></ul>
-          </article>
-          <article class="project-item">
-            <div class="project-head"><span>03 / NAVIGATION</span><b>First Contributor</b></div>
-            <h3>Visual Object Navigation</h3>
-            <p>Introduced DOA, DAT, and MT to strengthen indoor object navigation.</p>
-            <ul><li>Improved the reported indoor object-navigation success rate from 60% to 80%.</li></ul>
-          </article>
+      <section id="contact" class="bio contact-section">
+        <h1 class="md-heading text-left"><span class="heading-icon">●</span> Contact</h1>
+        <div class="contact-grid">
+          <div><span>Email</span><a href="mailto:drh1710013267@163.com">drh1710013267@163.com</a></div>
+          <div><span>Phone</span><a href="tel:+8617317813949">+86 173 1781 3949</a></div>
+          <div><span>WeChat</span><b>drh1710013267</b></div>
+          <div><span>Location</span><b>Hangzhou, China</b></div>
         </div>
-      </div>
-    </section>
-
-    <section class="section publications" id="publications">
-      <div class="section-label"><span>05</span> Publications</div>
-      <div class="section-body publication-panel">
-        <div class="publication-intro">
-          <p class="kicker light">Verified publication record</p>
-          <h2>Publications on<br>Google Scholar.</h2>
-          <p>Scholar is used as the canonical publication list to avoid stale citation counts or outdated metadata on this static website.</p>
-        </div>
-        <a class="scholar-ticket" href="https://scholar.google.com/citations?hl=en&amp;user=3MGeRMUAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noreferrer">
-          <div class="ticket-top"><span>PUBLIC PROFILE</span><span>↗</span></div>
-          <strong>3MGeRMUAAAAJ</strong>
-          <p>Sorted by publication date</p>
-          <div class="ticket-action">Browse all publications</div>
-        </a>
-      </div>
-    </section>
-
-    <section class="section cv" id="cv">
-      <div class="section-label"><span>06</span> Education &amp; CV</div>
-      <div class="section-body cv-grid">
-        <div>
-          <p class="kicker">Full profile</p>
-          <h2>Download my CV.</h2>
-          <p class="cv-note">The PDF contains the complete and authoritative record of my education, experience, publications, projects, and skills.</p>
-          <div class="education-list">
-            <article><span>2021 — 2024</span><h3>Tongji University</h3><p>M.Eng. in Control Science and Engineering · Shanghai</p><b>National Scholarship, Ministry of Education of China · 2023</b></article>
-            <article><span>2017 — 2021</span><h3>Tongji University</h3><p>B.Eng. in Automation · Shanghai</p></article>
-          </div>
-        </div>
-        <div class="document-card">
-          <div class="document-preview" aria-hidden="true">
-            <span>CURRICULUM VITAE</span>
-            <b>RD</b>
-            <i>2026</i>
-          </div>
-          <div class="document-info">
-            <p>Ronghao Dang / 党荣浩</p>
-            <span>PDF · Updated February 2026</span>
-            <a class="button button-dark" href="files/Ronghao_Dang_CV.pdf" target="_blank">View CV <span>↗</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <p class="kicker light">Get in touch</p>
-      <h2>Let’s discuss research,<br>ideas, or collaboration.</h2>
-      <a href="mailto:drh1710013267@163.com">drh1710013267@163.com <span>↗</span></a>
-    </section>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    <div><strong>Ronghao Dang</strong><span>党荣浩</span></div>
-    <p>© <span id="year">2026</span> Ronghao Dang. Hosted on GitHub Pages.</p>
-    <div class="footer-links">
-      <a href="https://github.com/Rh-Dang" target="_blank" rel="noreferrer">GitHub</a>
-      <a href="https://scholar.google.com/citations?user=3MGeRMUAAAAJ" target="_blank" rel="noreferrer">Scholar</a>
-      <a href="#top">Top ↑</a>
+  <footer class="site-footer">
+    <div class="wrapper footer-inner">
+      <span>© <span id="year">2026</span> Ronghao Dang · 党荣浩</span>
+      <span>Academic homepage hosted on GitHub Pages</span>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
