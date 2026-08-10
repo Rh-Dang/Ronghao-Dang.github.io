@@ -1063,7 +1063,23 @@ hr.soft {
 }
 
 .timeline-body {
-    padding: 0
+    padding: 0;
+    position: relative;
+}
+
+.timeline-body::before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 2.5px);
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: #333;
+    z-index: 0;
+}
+
+.timeline-item {
+    z-index: 1;
 }
 
 .timeline-start {
@@ -1080,7 +1096,8 @@ hr.soft {
     content: "";
     display: block;
     position: absolute;
-    border-radius: 5px
+    border-radius: 5px;
+    top: 0;
 }
 
 .timeline-item {
@@ -1090,7 +1107,7 @@ hr.soft {
 }
 
 .timeline-item:nth-child(odd):before {
-    left: -8px
+    left: -5.5px
 }
 
 .timeline-item:nth-child(odd):after {
@@ -1101,7 +1118,7 @@ hr.soft {
 .timeline-item:nth-child(odd) {
     margin-left: 50%;
     padding-left: 20px;
-    border-left: 5px solid #333;
+    border-left: none;
     text-align: left
 }
 
@@ -1109,12 +1126,12 @@ hr.soft {
     margin-right: -webkit-calc(50% + (20px));
     margin-right: calc(50% + (20px));
     padding-right: 20px;
-    border-right: 5px solid #333;
+    border-right: none;
     text-align: right
 }
 
 .timeline-item:nth-child(even):before {
-    right: -8px
+    right: -5.5px;
 }
 
 .timeline-item:nth-child(even):after {
@@ -1189,13 +1206,17 @@ hr.soft {
         border-radius: 5px
     }
 
+    .timeline-body::before {
+        left: 17px;
+    }
+
     .timeline-item,
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even) {
         min-height: 0;
         text-align: left;
-        border-left: 5px solid #333;
-        border-right: 0px;
+        border-left: none;
+        border-right: none;
         width: 100%;
         padding-left: 5px;
         margin-left: 5px;
@@ -1207,8 +1228,8 @@ hr.soft {
     .timeline>.timeline-body>.timeline-item:last-child:nth-child(even) {
         min-height: 0;
         text-align: left;
-        border-left: 5px solid #333;
-        border-right: 0px;
+        border-left: none;
+        border-right: none;
         width: 100%;
         padding-left: 5px;
         margin-left: 5px;
