@@ -5,7 +5,9 @@ body { color: #303030; background: #fff; }
 .site-nav .trigger { display: flex; justify-content: flex-end; flex-wrap: wrap; }
 .site-nav .page-link { font-size: 13px; }
 .shallow-bg {
-  background-image: linear-gradient(120deg, rgba(52,18,16,.88), rgba(110,33,24,.7)), radial-gradient(circle at 78% 28%, rgba(239,190,137,.42), transparent 32%), linear-gradient(135deg, #57211b, #a45c4a) !important;
+  background-image: linear-gradient(120deg, rgba(52,18,16,.55), rgba(110,33,24,.45)), url('../images/上海.jpg') !important;
+  background-size: cover;
+  background-position: center;
   position: relative;
   overflow: hidden;
 }
