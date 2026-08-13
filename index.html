@@ -52,7 +52,8 @@
         <div id="my-email" class="text-grey-light">drh1710013267@163.com</div>
         <div class="social-media profile-actions">
           <a href="https://scholar.google.com/citations?hl=en&amp;user=3MGeRMUAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noreferrer" class="icon-button profile-button scholar-profile-button" aria-label="Google Scholar">
-            Scholar <span id="scholar-citations" class="scholar-citations" aria-live="polite">· Citations: updating…</span>
+            <b class="profile-button-label">Scholar</b>
+            <small id="scholar-citations" class="scholar-citations" aria-live="polite">updating…</small>
           </a>
           <a href="https://github.com/Rh-Dang" target="_blank" rel="noreferrer" class="icon-button profile-button" aria-label="GitHub">GitHub</a>
           <a href="files/Ronghao_Dang_CV.pdf" target="_blank" class="icon-button profile-button" aria-label="Curriculum Vitae">CV</a>
@@ -327,13 +328,13 @@
         const data = await response.json();
         if (!Number.isInteger(data.citations) || data.citations < 0) throw new Error('Invalid citation count');
 
-        citationNode.textContent = '· Citations: ' + data.citations.toLocaleString('en-US');
+        citationNode.textContent = data.citations.toLocaleString('en-US') + ' citations';
         if (data.updated_at) {
           const updated = new Date(data.updated_at);
           scholarButton.title = 'Google Scholar citations · Updated ' + updated.toLocaleString();
         }
       } catch (error) {
-        citationNode.textContent = '· Citations: —';
+        citationNode.textContent = '— citations';
         scholarButton.title = 'Citation count will appear after the first successful scheduled update.';
       }
     }());

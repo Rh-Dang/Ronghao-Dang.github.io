@@ -19,12 +19,43 @@ body { color: #303030; background: #fff; }
 .cn-name { display: inline-block; color: #9b3022; font-size: .72em; margin-left: 7px; }
 #my-title { font-size: 15px; margin-top: 8px; }
 #my-email { color: #777; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; }
-.profile-actions { margin-top: 15px; display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; }
-.profile-button { width: auto !important; height: auto !important; border-radius: 4px !important; padding: 7px 10px; background: #9b3022; color: white !important; font: 700 10px Arial, sans-serif; text-decoration: none; }
-.profile-button:hover { background: #602018; transform: translateY(-1px); }
-.scholar-profile-button { display: inline-flex !important; align-items: center; gap: 5px; }
-.scholar-citations { color: #f4d79f; font-weight: 600; white-space: nowrap; }
-.scholar-profile-button:hover .scholar-citations { color: #fff; }
+.profile-actions { margin-top: 15px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px; }
+.profile-actions .icon-button.profile-button {
+  box-sizing: border-box;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  min-width: 58px;
+  height: 34px !important;
+  margin: 0 !important;
+  padding: 0 12px !important;
+  border: 0;
+  border-radius: 5px !important;
+  color: #fff !important;
+  background: #9b3022;
+  font: 700 12px/1 Arial, sans-serif !important;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color .18s ease, transform .18s ease;
+}
+.profile-actions .icon-button.profile-button:hover { background: #602018; transform: translateY(-1px); }
+.profile-actions .scholar-profile-button { gap: 9px; padding-right: 7px !important; }
+.profile-button-label { display: inline; margin: 0; font: inherit; }
+.scholar-citations {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  margin: 0;
+  padding: 0 7px;
+  border-left: 1px solid rgba(255,255,255,.3);
+  border-radius: 0 3px 3px 0;
+  color: #f7dca7;
+  background: rgba(0,0,0,.12);
+  font: 600 10px/1 Arial, sans-serif;
+  white-space: nowrap;
+}
+.profile-actions .scholar-profile-button:hover .scholar-citations { color: #fff; background: rgba(0,0,0,.18); }
 .page-content { padding-top: 42px; }
 section { scroll-margin-top: 84px; }
 .bio, .timeline-brief, .publications { margin-bottom: 48px; }
