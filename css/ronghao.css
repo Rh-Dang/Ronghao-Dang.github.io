@@ -19,17 +19,17 @@ body { color: #303030; background: #fff; }
 .cn-name { display: inline-block; color: #9b3022; font-size: .72em; margin-left: 7px; }
 #my-title { font-size: 15px; margin-top: 8px; }
 #my-email { color: #777; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; }
-.profile-actions { margin-top: 15px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px; }
+.profile-actions { margin-top: 15px; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; gap: 6px; white-space: nowrap; }
 .profile-actions .icon-button.profile-button {
   box-sizing: border-box;
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
   width: auto !important;
-  min-width: 58px;
+  min-width: 52px;
   height: 34px !important;
   margin: 0 !important;
-  padding: 0 12px !important;
+  padding: 0 10px !important;
   border: 0;
   border-radius: 5px !important;
   color: #fff !important;
@@ -40,14 +40,15 @@ body { color: #303030; background: #fff; }
   transition: background-color .18s ease, transform .18s ease;
 }
 .profile-actions .icon-button.profile-button:hover { background: #602018; transform: translateY(-1px); }
-.profile-actions .scholar-profile-button { gap: 9px; padding-right: 7px !important; }
+.profile-actions .scholar-profile-button { gap: 6px; padding-right: 6px !important; }
 .profile-button-label { display: inline; margin: 0; font: inherit; }
 .scholar-citations {
   display: inline-flex;
   align-items: center;
   height: 22px;
   margin: 0;
-  padding: 0 7px;
+  min-width: 15px;
+  padding: 0 5px;
   border-left: 1px solid rgba(255,255,255,.3);
   border-radius: 0 3px 3px 0;
   color: #f7dca7;
@@ -143,6 +144,10 @@ img.company-mark { object-fit: contain; background: transparent; }
   #profile-namecard { top: 0; }
   .profile-col { float: none !important; width: 90% !important; margin-top: 18px; margin-bottom: 18px; }
   #my-name { font-size: 27px; }
+  .profile-actions { gap: 4px; }
+  .profile-actions .icon-button.profile-button { min-width: 46px; height: 32px !important; padding: 0 8px !important; font-size: 11px !important; }
+  .profile-actions .scholar-profile-button { padding-right: 4px !important; }
+  .scholar-citations { height: 20px; padding-inline: 4px; font-size: 9px; }
   .contact-grid { grid-template-columns: 1fr; }
   .footer-inner { display: block; text-align: center; }
   .footer-inner span { display: block; margin: 4px 0; }
