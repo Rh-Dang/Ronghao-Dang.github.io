@@ -1,0 +1,40 @@
+name: Update Google Scholar citations
+
+on:
+  push:
+    branches: [master]
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scholar-citation-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Fetch citation count
+        run: python scripts/update_scholar_citations.py
+
+      - name: Commit updated data
+        run: |
+          if git diff --quiet -- data/scholar.json; then
+            echo "Citation data is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/scholar.json
+          git commit -m "chore: update Scholar citation count [skip ci]"
+          git push

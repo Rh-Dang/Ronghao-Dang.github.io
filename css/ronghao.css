@@ -22,6 +22,9 @@ body { color: #303030; background: #fff; }
 .profile-actions { margin-top: 15px; display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; }
 .profile-button { width: auto !important; height: auto !important; border-radius: 4px !important; padding: 7px 10px; background: #9b3022; color: white !important; font: 700 10px Arial, sans-serif; text-decoration: none; }
 .profile-button:hover { background: #602018; transform: translateY(-1px); }
+.scholar-profile-button { display: inline-flex !important; align-items: center; gap: 5px; }
+.scholar-citations { color: #f4d79f; font-weight: 600; white-space: nowrap; }
+.scholar-profile-button:hover .scholar-citations { color: #fff; }
 .page-content { padding-top: 42px; }
 section { scroll-margin-top: 84px; }
 .bio, .timeline-brief, .publications { margin-bottom: 48px; }

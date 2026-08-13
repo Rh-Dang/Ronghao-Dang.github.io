@@ -51,7 +51,9 @@
         <div id="my-title" class="text-grey">AI Researcher · JD Explore Academy</div>
         <div id="my-email" class="text-grey-light">drh1710013267@163.com</div>
         <div class="social-media profile-actions">
-          <a href="https://scholar.google.com/citations?hl=en&amp;user=3MGeRMUAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noreferrer" class="icon-button profile-button" aria-label="Google Scholar">Scholar</a>
+          <a href="https://scholar.google.com/citations?hl=en&amp;user=3MGeRMUAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noreferrer" class="icon-button profile-button scholar-profile-button" aria-label="Google Scholar">
+            Scholar <span id="scholar-citations" class="scholar-citations" aria-live="polite">· Citations: updating…</span>
+          </a>
           <a href="https://github.com/Rh-Dang" target="_blank" rel="noreferrer" class="icon-button profile-button" aria-label="GitHub">GitHub</a>
           <a href="files/Ronghao_Dang_CV.pdf" target="_blank" class="icon-button profile-button" aria-label="Curriculum Vitae">CV</a>
           <a href="mailto:drh1710013267@163.com" class="icon-button profile-button" aria-label="Email">Email</a>
@@ -311,6 +313,30 @@
       <span>Academic homepage hosted on GitHub Pages</span>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    (async function updateScholarCitations() {
+      const citationNode = document.getElementById('scholar-citations');
+      const scholarButton = document.querySelector('.scholar-profile-button');
+      if (!citationNode || !scholarButton) return;
+
+      try {
+        const response = await fetch('data/scholar.json?v=' + Date.now(), { cache: 'no-store' });
+        if (!response.ok) throw new Error('Citation data is unavailable');
+        const data = await response.json();
+        if (!Number.isInteger(data.citations) || data.citations < 0) throw new Error('Invalid citation count');
+
+        citationNode.textContent = '· Citations: ' + data.citations.toLocaleString('en-US');
+        if (data.updated_at) {
+          const updated = new Date(data.updated_at);
+          scholarButton.title = 'Google Scholar citations · Updated ' + updated.toLocaleString();
+        }
+      } catch (error) {
+        citationNode.textContent = '· Citations: —';
+        scholarButton.title = 'Citation count will appear after the first successful scheduled update.';
+      }
+    }());
+  </script>
 </body>
 </html>
