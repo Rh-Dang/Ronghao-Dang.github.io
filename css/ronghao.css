@@ -121,6 +121,9 @@ img.company-mark { object-fit: contain; background: transparent; }
 .scholar-dot { background: #3b78c4 !important; }
 .cv-dot { background: #9b3022 !important; }
 .award-list { margin-left: 20px; }
+.reviewer-title { margin: 22px 0 10px; color: #9b3022; font: 700 11px ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+.reviewer-section { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid #ddd; border-left: 1px solid #ddd; }
+.reviewer-column { min-height: 48px; padding: 13px 16px; box-sizing: border-box; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; color: #333; font-size: 13px; line-height: 1.55; }
 .contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid #ddd; border-left: 1px solid #ddd; }
 .contact-grid > div { min-height: 90px; padding: 18px; box-sizing: border-box; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
 .contact-grid span, .contact-grid a, .contact-grid b { display: block; }
@@ -148,6 +151,7 @@ img.company-mark { object-fit: contain; background: transparent; }
   .profile-actions .icon-button.profile-button { min-width: 46px; height: 32px !important; padding: 0 8px !important; font-size: 11px !important; }
   .profile-actions .scholar-profile-button { padding-right: 4px !important; }
   .scholar-citations { height: 20px; padding-inline: 4px; font-size: 9px; }
+  .reviewer-section { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .footer-inner { display: block; text-align: center; }
   .footer-inner span { display: block; margin: 4px 0; }
