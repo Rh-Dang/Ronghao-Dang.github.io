@@ -16,7 +16,7 @@ body { color: #303030; background: #fff; }
 #profile-namecard { z-index: 2; background: rgba(255,255,255,.94); box-shadow: 0 22px 55px rgba(34,12,10,.3); }
 #profile-avatar { background: #fff; aspect-ratio: 1; object-fit: cover; object-position: 50% 30%; }
 #my-name { line-height: 1.18; }
-.cn-name { display: inline-block; color: #9b3022; font-size: .72em; margin-left: 7px; }
+.cn-name { display: inline-block; color: #625b57; font-size: .72em; margin-left: 7px; }
 #my-title { font-size: 15px; margin-top: 8px; }
 #my-email { color: #777; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; }
 .profile-actions { margin-top: 15px; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; gap: 6px; white-space: nowrap; }
